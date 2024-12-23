@@ -44,13 +44,25 @@ Still logged into your Windows VM, change the Wireshark filter back to `icmp` an
 
 ![8  ubuntu network settings](https://github.com/user-attachments/assets/ea4acb80-bae3-4c82-bbeb-7863d78ede43)
 
+Scroll down until you find the Network Security Group's rules.
 
+![9  the network security group](https://github.com/user-attachments/assets/0aeb4a29-54d2-4376-a031-c504380b2261)
 
+We're going to create a rule that denys all ICMP traffic. Click "Create port rule" and then "Inbound port rule" since we want to stop ICMP (pings) from reaching our Ubuntu machine. We want to deny ICMP traffic from any port.
 
+![10  nsg blocking icmp](https://github.com/user-attachments/assets/094c38e5-ee0e-4970-a437-3fcd5988445b)
 
+Going back to our Windows virtual machine, we can see from Wireshark that instead of data being sent back and forth from our two virtual machines, instead we have ping request after ping request timing out. All of the traffic is going one way and not being reciprocated.
 
+![11  our requests time out](https://github.com/user-attachments/assets/36e3a9a4-9259-41c1-b7ad-2aa11652b5d4)
 
+If we delete the network rule that we just created, we can see that the pattern of traffic changed back to what we saw before: a request and response of ping packets going back and forth.
+<!-- Hopefully you know to click the trash can and don't need me to add another photo. -->
 
+![12  on speaking terms again](https://github.com/user-attachments/assets/4b878d81-e69e-437b-8461-c508f4742715)
+<!-- Funny file name :3 -->
 
+That was a basic introduction to working with internet protocols, network security group rules, wireshark, virtual machines, and storage using Microsoft Azure! Thank you for reading this far.
+<!-- And thanks for reading my silly comments. -->
 
 
