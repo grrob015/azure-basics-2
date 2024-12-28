@@ -1,6 +1,16 @@
 # azure-basics-2
 Data Storage, Virtual Machines, NSGs (Network Security Groups), and Internet Protocols (Part 2).
 
+<h2>Environments and Technologies Used</h2>
+
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
+
+<h2>Operating Systems Used </h2>
+
+- Windows 10</b> (21H2)
+- Ubuntu Linux
+
 ## Connecting to our Virtual Machine
 
 Connecting to a virtual machine for Remote Desktop (GUI over RDP 3389) will look different depending on what OS you're using. For Windows, the "Remote Desktop Connection" app should already be on your computer. On Mac, you will need to install "Microsoft Remote Desktop" from the app store. On linux, applications like RealNVC and XRDP exist. I am currently on Windows 10, so I will be using Remote Desktop Connection. Navigate to the resource of your Windows Virtual Machine and copy the **Public** IP address, putting it into your RDP connection application of choice, using the username we chose for it when we made it.
